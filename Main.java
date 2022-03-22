@@ -198,7 +198,7 @@ class Main {
       // generate target word
       char[] targetWordArr = targetWordMethod(words);
       
-      if (playAgain.equals("yes")) {
+      if (playAgain.toLowerCase().equals("yes")) {
         System.out.println("");
         System.out.println("----------------------------------------");
         System.out.println("");
@@ -210,7 +210,7 @@ class Main {
 
       // user input
       do {
-        if (!playAgain.equals("yes") && !playAgain.equals("no")) {
+        if (!playAgain.toLowerCase().equals("yes") && !playAgain.toLowerCase().equals("no") && !playAgain.equals("")) {
           System.out.println(red + "Please input a valid answer" + reset);
           Thread.sleep(500);
           inputClearing();
@@ -218,9 +218,9 @@ class Main {
         
         playAgain = sc.nextLine();
         inputClearing();
-      } while (!playAgain.equals("yes") && !playAgain.equals("no"));
+      } while (!playAgain.toLowerCase().equals("yes") && !playAgain.toLowerCase().equals("no"));
       
-    } while (playAgain.equals("yes"));
+    } while (playAgain.toLowerCase().equals("yes"));
 
     System.out.println("");
     System.out.println("----------------------------------------");
